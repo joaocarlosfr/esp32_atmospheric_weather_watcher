@@ -1,0 +1,71 @@
+menu "Configuração de WiFi"
+
+    config ESP_WIFI_SSID
+        string "WiFi SSID"
+        default "wifissid"
+        help
+            Nome da Rede WiFi.
+
+    config ESP_WIFI_PASSWORD
+        string "WiFi Password"
+        default "senhawifi"
+        help
+            Senha da Rede WiFi(WPA ou WPA2).
+            
+    config ESP_MAXIMUM_RETRY
+        int "Número máximo de tentativas"
+        default 5
+        help
+            Configure o valor máximo de tentativas de reconexão.
+
+endmenu
+
+menu "Configuração de I2C"
+
+    config SDA_PIN
+        int "Pino SDA"
+        default 18
+        help
+            Pino SDA.
+            
+    config SCL_PIN
+        int "Pino SCL"
+        default 19
+        help
+            Pino SCL.
+
+endmenu
+
+menu "Configuração de MQTT"
+
+    config URI_MQTT
+        string "URL do Broker"
+        default "mqtt:\\urldobroker"
+        help
+            URL do Broker, disponivel na documentação.
+
+    config PORT_MQTT
+        string "Porta do Broker"
+        default "1883"
+        help
+            Porta de acesso do Broker.
+
+    config CLIENT_ID_MQTT
+        string "Client ID"
+        default "esp32"
+        help
+            Client_ID, informado na plataforma ou de escolha.
+    
+    config USERNAME_MQTT
+        string "username"
+        default "username"
+        help
+            Username, informado na plataforma MQTT.
+    
+    config PASSWORD_MQTT
+        string "password"
+        default "password"
+        help
+            Password, informado na plataforma MQTT.
+
+endmenu

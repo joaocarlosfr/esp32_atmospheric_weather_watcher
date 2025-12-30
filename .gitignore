@@ -1,0 +1,10 @@
+.devcontainer
+.vscode
+*.old
+*.mk
+*.txt
+*.json
+/main/oculto
+/build
+Makefile
+sdkconfig
